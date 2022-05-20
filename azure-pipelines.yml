@@ -23,5 +23,5 @@ steps:
 
 - script: |
    bash <(curl -s https://detect.synopsys.com/detect7.sh) --blackduck.url=$(blackduck.url) --blackduck.api.token=$(blackduck.api.token) --detect.project.name=RDJ_DuckHub_ADO --detect.project.version=2.2
-  displayName: 'Run Black Duck Rapid Scan'
+  displayName: 'Run Black Duck Scan'
   enabled: true
