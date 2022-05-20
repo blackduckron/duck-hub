@@ -22,6 +22,6 @@ steps:
     goals: 'package'
 
 - script: |
-   https://detect.synopsys.com/detect7.ps1?$(Get-Random) | iex; detect" --blackduck.url=$(blackduck.url) --blackduck.api.token= $(blackduck.api.token) --detect.blackduck.scan.mode="RAPID"
+   bash <(curl -s https://detect.synopsys.com/detect7.sh) --blackduck.url=$(blackduck.url) --blackduck.api.token= $(blackduck.api.token) --detect.blackduck.scan.mode="RAPID"
   displayName: 'Run Black Duck Rapid Scan'
   enabled: true
